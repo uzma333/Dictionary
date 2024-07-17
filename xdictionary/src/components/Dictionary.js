@@ -35,7 +35,7 @@ function Dictionary() {
         <div className={styles.dictionary}>
             <input type='text' value={inputWord} onChange={(e)=>setInputWord(e.target.value)} placeholder='Search for a word'/>
             <button onClick={handleSearch}>Search</button>
-           <strong> <p>Definition: </p></strong>
+            <strong> <p style={{margin:"0px",padding:"0px"}}>Definition: </p></strong>
            {Definition && <p>{Definition}</p>}
           
         </div>
