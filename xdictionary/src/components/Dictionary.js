@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import styles from "./Dictionary.module.css"
 
 
 const customDictionary=
@@ -29,13 +30,14 @@ function Dictionary() {
         }
     }
   return (
-    <div>
+    <div className={styles.heading}>
         <h1>Dictionary App</h1>
-        <div>
+        <div className={styles.dictionary}>
             <input type='text' value={inputWord} onChange={(e)=>setInputWord(e.target.value)} placeholder='Search for a word'/>
             <button onClick={handleSearch}>Search</button>
-           <strong> <p>Definition:</p></strong>
+           <strong> <p>Definition: </p></strong>
            {Definition && <p>{Definition}</p>}
+          
         </div>
        
         
