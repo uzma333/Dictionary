@@ -33,10 +33,10 @@ function Dictionary() {
     <div className={styles.heading}>
         <h1>Dictionary App</h1>
         <div className={styles.dictionary}>
-            <input type='text' value={inputWord} onChange={(e)=>setInputWord(e.target.value)} placeholder='Search for a word'/>
-            <button onClick={handleSearch}>Search</button>
+            <input type='text' value={inputWord} onChange={(e)=>setInputWord(e.target.value)} placeholder='Search for a word'  data-testid="search-input"/>
+            <button onClick={handleSearch} data-testid="search-button">Search</button>
             <strong> <p style={{margin:"0px",padding:"0px"}}>Definition: </p></strong>
-           {Definition && <p>{Definition}</p>}
+           {Definition && <p data-testid="search-button">{Definition}</p>}
           
         </div>
        
